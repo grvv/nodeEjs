@@ -7,9 +7,11 @@ app.set('view engine', 'ejs');
 
 // use res.render to load up an ejs view file
 
+const people = ['geddy', 'neil', 'alex'];
+
 // index page 
 app.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/index', {people});
 });
 
 // about page 
